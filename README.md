@@ -1,4 +1,4 @@
-# Luke's build of dwm
+# Murdoc's build of dwm
 
 ## FAQ
 

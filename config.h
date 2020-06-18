@@ -56,6 +56,7 @@ static const Rule rules[] = {
     { "Gimp",                       NULL,           NULL,       	  1 << 8,       0,           0,          0,         -1 },
 	{ "trayer",                     NULL,           NULL,             1 << 8,       1,           0,          0,         -1 },
 	{ "Evolution",                  NULL,           NULL,             1 << 5,       0,           0,          0,         -1 },
+	{ "Evolution-alarm-notify",     NULL,           NULL,             1 << 5,       1,           0,          0,         -1 },
 	{ "Microsoft Teams - Preview",  NULL,           NULL,             1 << 6,       0,           0,          0,         -1 },
 	{ NULL,                         NULL,           "Microsoft Teams-Benachrichtigung",1 << 6,1, 0,          0,         -1 },
 	{ NULL,                         NULL,           "term1",          1 << 1,       0,           1,          0,         -1 },

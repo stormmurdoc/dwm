@@ -151,6 +151,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,	XK_w,		spawn,		SHCMD("st -e sudo nmtui") },
 	{ MODKEY,			XK_e,		spawn,		SHCMD("evolution") },
 	{ MODKEY,			XK_l,		spawn,		SHCMD("rofi -show run -i -lines 10 -eh 1 -width 50 -padding 50 -opacity '85' -font 'Droid Sans 16' -bg '2F3F4F'")},
+	{ MODKEY|ShiftMask, XK_l,		spawn,		SHCMD("betterlockscreen -l '/home/murdoc/ownCloud/Bilder (Kopie)/Hintergrundbilder/trevor-cole-393228.jpg'")},
 	{ MODKEY|ShiftMask,	XK_e,		spawn,		SHCMD("notify-send 'no action defined!'") },
 	{ MODKEY,			XK_r,		spawn,		SHCMD("st -e ranger") },
 	{ MODKEY|ShiftMask,	XK_r,		spawn,		SHCMD("st -e htop") },

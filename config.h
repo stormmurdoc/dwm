@@ -42,7 +42,7 @@ static Sp scratchpads[] = {
 };
 
 /* tagging */
-static const char *tags[] = { "1:Web ", "2:Term", "3:File Manager ", "4:VDI ", "5", "6:Email ", "7:Teams ", "8", "9" }      ;
+static const char *tags[] = { "1:Web ", "2:Term", "3:File Manager ", "4:VDI ", "5:IRC ", "6:Email ", "7:Teams ", "8", "9" }      ;
 
 /* rulez */
 static const Rule rules[] = {
@@ -61,8 +61,9 @@ static const Rule rules[] = {
 	{ NULL,                         NULL,           "Microsoft Teams-Benachrichtigung",1 << 6,1, 0,          0,         -1 },
 	{ NULL,                         NULL,           "term1",          1 << 1,       0,           1,          0,         -1 },
 	{ NULL,                         NULL,           "termranger",     1 << 2,       0,           1,          0,         -1 },
-	{ "Vmware-view",                NULL,           NULL,             1 << 3,       0,           0,          0,         -1 },
-	{ NULL,                         NULL,          "Event Tester",    0,            0,           0,          1,         -1 },
+    { "Vmware-view",                NULL,           NULL,             1 << 3,       0,           0,          0,         -1 },
+	{ NULL,                         NULL,           "irc",            1 << 4,       0,           0,          0,         -1 },
+	{ NULL,                         NULL,           "Event Tester",   0,            0,           0,          1,         -1 },
     { NULL,                        "spterm",        NULL,       	  SPTAG(0),     1,           1,          0,         -1 },
 	{ NULL,                        "spcalc",        NULL,       	  SPTAG(1),     1,           1,          0,         -1 },
     //{ "trayer",   NULL,       NULL,             1 << 8,       1,           0,         0,        -1 },

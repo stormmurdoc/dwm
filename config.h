@@ -77,19 +77,19 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 #include "vanitygaps.c"
 static const Layout layouts[] = {
     /* symbol     arrange function */
-    { "[]=",    tile },         /* Default: Master on left, slaves on right */
-    { "TTT",    bstack },       /* Master on top, slaves on bottom */
+    { "[]=",    tile },                     /* Default: Master on left, slaves on right */
+    { "TTT",    bstack },                   /* Master on top, slaves on bottom */
 
-    { "[@]",    spiral },       /* Fibonacci spiral */
-    { "[\\]",   dwindle },      /* Decreasing in size right and leftward */
+    { "[@]",    spiral },                   /* Fibonacci spiral */
+    { "[\\]",   dwindle },                  /* Decreasing in size right and leftward */
 
-    { "H[]",    deck },         /* Master on left, slaves in monocle-like mode on right */
-    { "[M]",    monocle },      /* All windows on top of eachother */
+    { "H[]",    deck },                     /* Master on left, slaves in monocle-like mode on right */
+    { "[M]",    monocle },                  /* All windows on top of eachother */
 
-    { "|M|",    centeredmaster },       /* Master in middle, slaves on sides */
+    { "|M|",    centeredmaster },           /* Master in middle, slaves on sides */
     { ">M>",    centeredfloatingmaster },   /* Same but master floats */
 
-    { "><>",    NULL },         /* no layout function means floating behavior */
+    { "><>",    NULL },                     /* no layout function means floating behavior */
     { NULL,     NULL },
 };
 
@@ -147,15 +147,15 @@ static Key keys[] = {
     { MODKEY,           XK_w,           spawn,      SHCMD("$BROWSER") },
     { MODKEY|ShiftMask, XK_w,           spawn,      SHCMD("st -e sudo nmtui") },
     { MODKEY,           XK_e,           spawn,      SHCMD("evolution") },
-    { MODKEY,           XK_l,           spawn,      SHCMD("rofi -show run -i -lines 10 -eh 1 -width 50 -padding 50 -opacity '85' -font 'Droid Sans 16' -bg '2F3F4F'")},
+    /* { MODKEY,           XK_l,           spawn,      SHCMD("rofi -show run -i -lines 10 -eh 1 -width 50 -padding 50 -opacity '85' -font 'Droid Sans 16' -bg '2F3F4F'")}, */
     { MODKEY|ShiftMask, XK_l,           spawn,      SHCMD("betterlockscreen -l '/home/murdoc/ownCloud/Bilder (Kopie)/Hintergrundbilder/trevor-cole-393228.jpg'")},
-    { MODKEY|ShiftMask, XK_e,           spawn,      SHCMD("notify-send 'no action defined!'") },
+    { MODKEY|ShiftMask, XK_e,           spawn,      SHCMD("st -e neomutt") },
     { MODKEY,           XK_r,           spawn,      SHCMD("st -e ranger") },
     { MODKEY|ShiftMask, XK_r,           spawn,      SHCMD("st -e htop") },
     { MODKEY,           XK_t,           setlayout,  {.v = &layouts[0]} }, /* tile */
     { MODKEY|ShiftMask, XK_t,           setlayout,  {.v = &layouts[1]} }, /* bstack */
-    { MODKEY,           XK_y,           setlayout,  {.v = &layouts[2]} }, /* spiral */
-    { MODKEY|ShiftMask, XK_y,           setlayout,  {.v = &layouts[3]} }, /* dwindle */
+    { MODKEY,           XK_z,           setlayout,  {.v = &layouts[2]} }, /* spiral */
+    { MODKEY|ShiftMask, XK_z,           setlayout,  {.v = &layouts[3]} }, /* dwindle */
     { MODKEY,           XK_u,           setlayout,  {.v = &layouts[4]} }, /* deck */
     { MODKEY|ShiftMask, XK_u,           setlayout,  {.v = &layouts[5]} }, /* monocle */
     { MODKEY,           XK_i,           setlayout,  {.v = &layouts[6]} }, /* centeredmaster */
@@ -187,8 +187,8 @@ static Key keys[] = {
     { MODKEY,           XK_c,           togglescratch,  {.ui = 1} },
     { MODKEY,           XK_Return,      spawn,          {.v = termcmd } },
     { MODKEY|ShiftMask, XK_Return,      togglescratch,  {.ui = 0} },
-    { MODKEY,           XK_z,           incrgaps,       {.i = +3 } },
-    { MODKEY|ShiftMask, XK_z,           incrgaps,       {.i = -3 } },
+    { MODKEY,           XK_y,           incrgaps,       {.i = +3 } },
+    { MODKEY|ShiftMask, XK_y,           incrgaps,       {.i = -3 } },
     /* V is automatically bound above in STACKKEYS */
     { MODKEY,           XK_b,           togglebar,      {0} },
     { MODKEY|ShiftMask, XK_b,           spawn,      SHCMD("airpods.sh t") },

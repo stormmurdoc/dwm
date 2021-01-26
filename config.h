@@ -42,7 +42,7 @@ static Sp scratchpads[] = {
 };
 
 /* tagging */
-static const char *tags[] = { "1:Web ", "2:Term", "3:File Manager ", "4:VDI ", "5:IRC ", "6:Email ", "7:Teams ", "8", "9" }      ;
+static const char *tags[] = { "1:Web ", "2:Term ", "3:Files ", "4:VDI ", "5:IRC ", "6:Email ", "7:Discord ", "8", "9" }      ;
 
 /* rulez */
 static const Rule rules[] = {
@@ -58,6 +58,7 @@ static const Rule rules[] = {
     { "Evolution",                  NULL,           NULL,             1 << 5,       0,           0,          0,         -1 },
     { "Evolution-alarm-notify",     NULL,           NULL,             1 << 5,       1,           0,          0,         -1 },
     { "Microsoft Teams - Preview",  NULL,           NULL,             1 << 6,       0,           0,          0,         -1 },
+	{ "discord",                    NULL,           NULL,             1 << 6,       0,           0,          0,         -1 },
     { NULL,                         NULL,           "Microsoft Teams-Benachrichtigung",1 << 6,1, 0,          0,         -1 },
     { NULL,                         NULL,           "term1",          1 << 1,       0,           1,          0,         -1 },
     { NULL,                         NULL,           "termranger",     1 << 2,       0,           1,          0,         -1 },
@@ -70,7 +71,7 @@ static const Rule rules[] = {
 };
 
 /* layout(s) */
-static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.60; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 #define FORCE_VSPLIT 1  /* nrowgrid layout: force two clients to always split vertically */
@@ -141,13 +142,14 @@ static Key keys[] = {
     { MODKEY|ShiftMask, XK_plus,        spawn,      SHCMD("pamixer --allow-boost -i 15; kill -44 $(pidof dwmblocks) && pa_notify.sh") },
     { MODKEY,           XK_BackSpace,   spawn,      SHCMD("dwm_exit.sh") },
     { MODKEY|ShiftMask, XK_BackSpace,   spawn,      SHCMD("dwm_exit.sh") },
+    { MODKEY|ShiftMask, XK_asciicircum, spawn,      SHCMD("dmenuunicode") },
     { MODKEY,           XK_Tab,         view,       {0} },
     { MODKEY,           XK_q,           killclient, {0} },
     { MODKEY|ShiftMask, XK_q,           spawn,      SHCMD("dwm_exit.sh") },
     { MODKEY,           XK_w,           spawn,      SHCMD("$BROWSER") },
     { MODKEY|ShiftMask, XK_w,           spawn,      SHCMD("st -e sudo nmtui") },
     { MODKEY,           XK_e,           spawn,      SHCMD("evolution") },
-    /* { MODKEY,           XK_l,           spawn,      SHCMD("rofi -show run -i -lines 10 -eh 1 -width 50 -padding 50 -opacity '85' -font 'Droid Sans 16' -bg '2F3F4F'")}, */
+/*  { MODKEY,           XK_l,           spawn,      SHCMD("rofi -show run -i -lines 10 -eh 1 -width 50 -padding 50 -opacity '85' -font 'Droid Sans 16' -bg '2F3F4F'")}, */
     { MODKEY|ShiftMask, XK_l,           spawn,      SHCMD("betterlockscreen -l '/home/murdoc/ownCloud/Bilder (Kopie)/Hintergrundbilder/trevor-cole-393228.jpg'")},
     { MODKEY|ShiftMask, XK_e,           spawn,      SHCMD("st -e neomutt") },
     { MODKEY,           XK_r,           spawn,      SHCMD("st -e ranger") },

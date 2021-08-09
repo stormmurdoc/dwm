@@ -11,6 +11,8 @@ static const int swallowfloating    = 0;        /* 1 means swallow floating wind
 static const int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
+
+/* font config */
 static const char *fonts[]          = {
    "Droid Sans:size=11:antialias=true:autohint=true",
    "Droid Sans Mono Dotted for Powerline:size=11:antialias=true:autohint=true",
@@ -147,9 +149,9 @@ static Key keys[] = {
     { MODKEY,           XK_Tab,         view,       {0} },
     { MODKEY,           XK_q,           killclient, {0} },
     { MODKEY|ShiftMask, XK_q,           spawn,      SHCMD("dwm_exit.sh") },
-    { MODKEY,           XK_w,           spawn,      SHCMD("$BROWSER") },
+    { MODKEY,           XK_w,           spawn,      SHCMD("xdo activate -N $BROWSER || $BROWSER") },
     { MODKEY|ShiftMask, XK_w,           spawn,      SHCMD("st -e sudo nmtui") },
-    { MODKEY,           XK_e,           spawn,      SHCMD("evolution") },
+    { MODKEY,           XK_e,           spawn,      SHCMD("xdo activate -N Evolution || evolution") },
     { MODKEY,           XK_d,           spawn,      SHCMD("rofi -show-icons -show drun") },
 //    { MODKEY,           XK_d,           spawn,      {.v = dmenucmd } },
 //  { MODKEY,           XK_d,           spawn,      SHCMD("rofi -show run -i -lines 10 -eh 1 -width 50 -padding 50 -opacity '85' -font 'Droid Sans 16' -bg '2F3F4F'")},

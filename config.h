@@ -12,7 +12,7 @@ static const int smartgaps          = 0;        /* 1 means no outer gap when the
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 
-/* font config */
+/* Font config */
 static const char *fonts[]          = {
    "Droid Sans:size=11:antialias=true:autohint=true",
    "Droid Sans Mono Dotted for Powerline:size=11:antialias=true:autohint=true",

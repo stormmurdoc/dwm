@@ -1,8 +1,8 @@
 name: Generate dwm keymaps file with github workflows
 on:
-push:
-  paths:
-    - 'config.h'
+  push:
+    paths:
+      - 'config.h'
 
 jobs:
   # this workflow contains a single job called "run dwm keymaps script"

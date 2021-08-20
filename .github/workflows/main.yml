@@ -1,0 +1,23 @@
+name: Generate dwm keymaps file
+on: [push]
+
+jobs:
+  # this workflow contains a single job called "generate"
+  build:
+    # type of the runner that the job will run on
+    runs-on: ubuntu-latest
+
+    steps:
+      # checkout repo under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout
+
+      # runs a single command / script
+      - name: run dwm keymaps script
+        run: sh ./doc/start.sh
+
+      # run a multiline script
+      - name: Multiline Script
+        run: |
+          echo "start.sh executed!"
+          ls -lart
+

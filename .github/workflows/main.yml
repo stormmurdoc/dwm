@@ -1,4 +1,4 @@
-name: Generate dwm keymaps file with github workflows
+name: Generate dwm keymaps file with github workflows only if config.h is changed
 on:
   push:
     paths:

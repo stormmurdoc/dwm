@@ -13,7 +13,7 @@ jobs:
 
       # runs a single command / script
       - name: run dwm keymaps script
-        run: sh ./docs/getdwmkeys.sh markdown
+        run: sh ./docs/getdwmkeys.sh config.h markdown
 
       # run a multiline script
       - name: Multiline Script

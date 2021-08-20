@@ -1,4 +1,4 @@
-name: Generate dwm keymaps file
+name: Generate dwm keymaps file with github workflows
 on: [push]
 
 jobs:

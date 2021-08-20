@@ -9,7 +9,7 @@ jobs:
 
     steps:
       # checkout repo under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout
+      - uses: actions/checkout@v2
 
       # runs a single command / script
       - name: run dwm keymaps script

@@ -1,5 +1,3 @@
-# dwm key config
-
 | Key | Function | Argument |
 | :-: | :-: | :- |
 |  j | ACTION##stack |  INC(+1) |

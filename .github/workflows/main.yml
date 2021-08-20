@@ -3,7 +3,6 @@ on:
   push:
     paths:
       - 'config.h'
-
 jobs:
   # this workflow contains a single job called "run dwm keymaps script"
   build:

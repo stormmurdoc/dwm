@@ -21,7 +21,7 @@ jobs:
       # run a multiline script
       - name: Multiline Script
         run: |
-          echo "start.sh executed!"
+          echo "./docs/getdwmkeys.sh executed!"
           ls -lart
 
       - name: move to dir # Move the generated files into output folder

@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# Credits go to https://github.com/HiMyNameIsGarch/dotfiles/blob/main/.local/bin/rice
+
 SCRIPT=$(basename "$0")
 
 helpmenu() {

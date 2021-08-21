@@ -24,17 +24,16 @@ jobs:
           ls -lart
 
       # Move the generated files into output folder
-      - name: move to dir
+      - name: move to dir docs
         run: |
-          mkdir -p output
-          yes| cp -rf keys.md ./output/
+          yes| cp -rf keys.md ./docs/
 
       # commit the output folder
       - name: Commit files
         run: |
           git config --local user.email "test@github.com"
           git config --local user.name "GitHub Action test"
-          git add ./output
+          git add ./docs/
           git commit -m "add created keys.md file"
 
       # push the output folder to your repo

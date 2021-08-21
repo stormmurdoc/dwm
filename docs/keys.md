@@ -117,5 +117,5 @@
 | TouchpadToggle | spawns | (synclient  +  grep 'TouchpadOff.*1' && synclient TouchpadOff=0)  +  +  synclient TouchpadOff=1 |
 | TouchpadOff | spawns | synclient TouchpadOff=1 |
 | TouchpadOn | spawns | synclient TouchpadOff=0 |
-| MonBrightnessUp | spawns | xbacklight -inc 15 && xbl_notify.sh |
-| MonBrightnessDown | spawns | xbacklight -dec 15 && xbl_notify.sh |
+| MonBrightnessUp | spawns | xbacklight -inc 10 && xbl_notify.sh |
+| MonBrightnessDown | spawns | xbacklight -dec 10 && xbl_notify.sh |

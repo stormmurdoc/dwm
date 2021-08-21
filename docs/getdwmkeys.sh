@@ -1,9 +1,11 @@
 #!/bin/sh
 
+SCRIPT=$(basename "$0")
+
 helpmenu() {
-    echo rice - a tool to create a markdown file from dwm config
+    echo $SCRIPT - a tool to create a markdown file from dwm config
     echo
-    echo Usage: rice \[filename\] \[options\]
+    echo Usage: $SCRIPT \[filename\] \[options\]
     echo
     echo Filename:
     echo "  The filename of your config, must end in .h"
@@ -115,7 +117,7 @@ checkdwm(){
         markdown | md) mddwm  "$2" ;;
         status   | s)  statdwm ;;
         key      | k)  keydwm "$2" ;;
-        *) error "You must provide an argument for the file! Type 'rice help' to get more information!"
+        *) error "You must provide an argument for the file! Type '$SCRIPT help' to get more information!"
     esac
 }
 FILE="$1"

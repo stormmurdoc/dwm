@@ -23,15 +23,21 @@ jobs:
           echo "./docs/getdwmkeys.sh executed!"
           ls -lart
 
-      - name: move to dir # Move the generated files into output folder
+      # Move the generated files into output folder
+      - name: move to dir
         run: |
           mkdir -p output
           yes| cp -rf keys.md ./output/
-      - name: Commit files # commit the output folder
+
+      # commit the output folder
+      - name: Commit files
         run: |
           git config --local user.email "test@github.com"
           git config --local user.name "GitHub Action test"
           git add ./output
-          git commit -m "Add changes"
-      - name: Push changes # push the output folder to your repo
+          git commit -m "add created keys.md file"
+
+      # push the output folder to your repo
+      - name: Push changes
         uses: ad-m/github-push-action@master
+

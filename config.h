@@ -216,7 +216,7 @@ static Key keys[] = {
     { MODKEY|ShiftMask, XK_Page_Down,   shifttag,   { .i = +1 } },
     { MODKEY,           XK_Insert,      spawn,      SHCMD("notify-send \"📋 Clipboard contents:\" \"$(xclip -o -selection clipboard)\"") },
     { MODKEY,           XK_F1,          spawn,      SHCMD("pamixer -t; kill -44 $(pidof dwmblocks) && pa_notify.sh") },
-    { MODKEY,           XK_F2,          spawn,      SHCMD("tutorialvids") },
+    { MODKEY,           XK_F2,          spawn,      SHCMD("dmenuunicode") },
     { MODKEY,           XK_F3,          spawn,      SHCMD("displayselect.sh") },
     { MODKEY,           XK_F4,          spawn,      SHCMD("st -e pulsemixer; kill -44 $(pidof dwmblocks)") },
     { MODKEY,           XK_F5,          xrdb,       {.v = NULL } },

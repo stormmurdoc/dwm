@@ -26,7 +26,7 @@ jobs:
       # Move the generated files into output folder
       - name: move to dir docs
         run: |
-          yes| cp -rf keys.md ./docs/
+          mv keys.md ./docs/
 
       # commit the output folder
       - name: Commit files

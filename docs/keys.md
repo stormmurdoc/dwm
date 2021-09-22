@@ -78,7 +78,7 @@
 | Super + Insert | spawns | notify-send \"📋 Clipboard contents:\" \"$(xclip -o -selection clipboard)\" |
 | Super + F1 | spawns | pamixer -t; kill -44 $(pidof dwmblocks) && pa_notify.sh |
 | Super + F2 | spawns | dmenuunicode |
-| Super + F3 | spawns | displayselect.sh |
+| Super + F3 | spawns | st -e displayselect.sh |
 | Super + F4 | spawns | st -e pulsemixer; kill -44 $(pidof dwmblocks) |
 | Super + F6 | spawns | torwrap |
 | Super + F7 | spawns | td-toggle |

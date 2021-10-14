@@ -3,10 +3,10 @@
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
-static const unsigned int gappih    = 10;       /* horiz inner gap between windows */
-static const unsigned int gappiv    = 10;       /* vert inner gap between windows */
-static const unsigned int gappoh    = 10;       /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov    = 10;       /* vert outer gap between windows and screen edge */
+static const unsigned int gappih    = 5;       /* horiz inner gap between windows */
+static const unsigned int gappiv    = 5;       /* vert inner gap between windows */
+static const unsigned int gappoh    = 5;       /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov    = 5;       /* vert outer gap between windows and screen edge */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
@@ -37,10 +37,12 @@ typedef struct {
 } Sp;
 const char *spcmd1[] = {"st", "-n", "spterm", "-g", "120x34", "-e", "tmuxinit.sh", NULL };
 const char *spcmd2[] = {"st", "-n", "spcalc", "-f", "monospace:size=16", "-g", "50x20", "-e", "bc", "-lq", NULL };
+const char *spcmd3[] = {"st", "-n", "splf", "-f", "monospace:size=16", "-g", "120x34", "-e", "lfrun", NULL };
 static Sp scratchpads[] = {
     /* name          cmd  */
     {"spterm",      spcmd1},
-    {"spranger",    spcmd2},
+    {"spcalc",      spcmd2},
+    {"splf",        spcmd3},
 };
 
 /* tagging */
@@ -69,6 +71,7 @@ static const Rule rules[] = {
     { NULL,                         NULL,           "Event Tester",   0,            0,           0,          1,         -1 },
     { NULL,                        "spterm",        NULL,             SPTAG(0),     1,           1,          0,         -1 },
     { NULL,                        "spcalc",        NULL,             SPTAG(1),     1,           1,          0,         -1 },
+    { NULL,                        "splf",          NULL,             SPTAG(2),     1,           1,          0,         -1 },
     //{ "trayer",   NULL,       NULL,             1 << 8,       1,           0,         0,        -1 },
 };
 
@@ -157,8 +160,9 @@ static Key keys[] = {
 //  { MODKEY,           XK_d,           spawn,      SHCMD("rofi -show run -i -lines 10 -eh 1 -width 50 -padding 50 -opacity '85' -font 'Droid Sans 16' -bg '2F3F4F'")},
     { MODKEY|ShiftMask, XK_l,           spawn,      SHCMD("betterlockscreen -l '/home/murdoc/ownCloud/Bilder (Kopie)/Hintergrundbilder/trevor-cole-393228.jpg'")},
     { MODKEY|ShiftMask, XK_e,           spawn,      SHCMD("st -e neomutt") },
-    { MODKEY,           XK_r,           spawn,      SHCMD("st -e lfrun") },
-    { MODKEY|ShiftMask, XK_r,           spawn,      SHCMD("st -e htop") },
+    //{ MODKEY,           XK_r,           spawn,      SHCMD("st -e lfrun") },
+    { MODKEY,           XK_r,           togglescratch,  {.ui = 2} },
+    { MODKEY|ShiftMask, XK_r,           spawn,      SHCMD("st -e btop") },
     { MODKEY,           XK_t,           setlayout,  {.v = &layouts[0]} }, /* tile */
     { MODKEY|ShiftMask, XK_t,           setlayout,  {.v = &layouts[1]} }, /* bstack */
     { MODKEY,           XK_z,           setlayout,  {.v = &layouts[2]} }, /* spiral */
@@ -253,7 +257,7 @@ static Key keys[] = {
     { 0, XF86XK_WWW,                    spawn,      SHCMD("$BROWSER") },
     { 0, XF86XK_DOS,                    spawn,      SHCMD("st") },
     { 0, XF86XK_ScreenSaver,            spawn,      SHCMD("slock & xset dpms force off; mpc pause; pauseallmpv") },
-    { 0, XF86XK_TaskPane,               spawn,      SHCMD("st -e htop") },
+    { 0, XF86XK_TaskPane,               spawn,      SHCMD("st -e btop") },
     { 0, XF86XK_Mail,                   spawn,      SHCMD("evolution") },
     { 0, XF86XK_MyComputer,             spawn,      SHCMD("st -e lfrun /") },
     { 0, XF86XK_Launch1,                spawn,      SHCMD("xset dpms force off") },

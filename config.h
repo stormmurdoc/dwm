@@ -65,7 +65,7 @@ static const Rule rules[] = {
     { "discord",                    NULL,           NULL,             1 << 6,       0,           0,          0,         -1 },
     { NULL,                         NULL,           "Microsoft Teams-Benachrichtigung",1 << 6,1, 0,          0,         -1 },
     { NULL,                         NULL,           "term1",          1 << 1,       0,           1,          0,         -1 },
-    { NULL,                         NULL,           "termlf",     1 << 2,       0,           1,          0,         -1 },
+    { NULL,                         NULL,           "termlf",         1 << 2,       0,           1,          0,         -1 },
     { "Vmware-view",                NULL,           NULL,             1 << 3,       0,           0,          0,         -1 },
     { NULL,                         NULL,           "termirc",        1 << 4,       0,           1,          0,         -1 },
     { NULL,                         NULL,           "Event Tester",   0,            0,           0,          1,         -1 },
@@ -76,10 +76,10 @@ static const Rule rules[] = {
 };
 
 /* layout(s) */
-static const float mfact     = 0.60; /* factor of master area size [0.05..0.95] */
-static const int nmaster     = 1;    /* number of clients in master area */
-static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
-#define FORCE_VSPLIT 1  /* nrowgrid layout: force two clients to always split vertically */
+static const float mfact     = 0.60;        /* factor of master area size [0.05..0.95] */
+static const int nmaster     = 1;           /* number of clients in master area */
+static const int resizehints = 1;           /* 1 means respect size hints in tiled resizals */
+#define FORCE_VSPLIT 1                      /* nrowgrid layout: force two clients to always split vertically */
 #include "vanitygaps.c"
 static const Layout layouts[] = {
     /* symbol     arrange function */
@@ -156,11 +156,8 @@ static Key keys[] = {
     { MODKEY|ShiftMask, XK_w,           spawn,      SHCMD("st -e sudo nmtui") },
     { MODKEY,           XK_e,           spawn,      SHCMD("xdo activate -N Evolution || evolution") },
     { MODKEY,           XK_d,           spawn,      SHCMD("rofi -show-icons -show drun") },
-//    { MODKEY,           XK_d,           spawn,      {.v = dmenucmd } },
-//  { MODKEY,           XK_d,           spawn,      SHCMD("rofi -show run -i -lines 10 -eh 1 -width 50 -padding 50 -opacity '85' -font 'Droid Sans 16' -bg '2F3F4F'")},
     { MODKEY|ShiftMask, XK_l,           spawn,      SHCMD("betterlockscreen -l '/home/murdoc/ownCloud/Bilder (Kopie)/Hintergrundbilder/trevor-cole-393228.jpg'")},
     { MODKEY|ShiftMask, XK_e,           spawn,      SHCMD("st -e neomutt") },
-    //{ MODKEY,           XK_r,           spawn,      SHCMD("st -e lfrun") },
     { MODKEY,           XK_r,           togglescratch,  {.ui = 2} },
     { MODKEY|ShiftMask, XK_r,           spawn,      SHCMD("st -e btop") },
     { MODKEY,           XK_t,           setlayout,  {.v = &layouts[0]} }, /* tile */
@@ -179,9 +176,7 @@ static Key keys[] = {
     { MODKEY|ShiftMask, XK_bracketleft, spawn,      SHCMD("mpc seek -60") },
     { MODKEY,           XK_bracketright,spawn,      SHCMD("mpc seek +10") },
     { MODKEY|ShiftMask, XK_bracketright,spawn,      SHCMD("mpc seek +60") },
-    { MODKEY,           XK_backslash,   view,       {0} },
-    /* { MODKEY|ShiftMask,      XK_backslash,       spawn,      SHCMD("") }, */
-
+    { MODKEY,           XK_backslash,   view,           {0} },
     { MODKEY,           XK_a,           togglegaps,     {0} },
     { MODKEY|ShiftMask, XK_a,           defaultgaps,    {0} },
     { MODKEY,           XK_s,           togglesticky,   {0} },
@@ -266,23 +261,6 @@ static Key keys[] = {
     { 0, XF86XK_TouchpadOn,             spawn,      SHCMD("synclient TouchpadOff=0") },
     { 0, XF86XK_MonBrightnessUp,        spawn,      SHCMD("xbacklight -inc 15 && xbl_notify.sh") },
     { 0, XF86XK_MonBrightnessDown,      spawn,      SHCMD("xbacklight -dec 15 && xbl_notify.sh") },
-
-    /* { MODKEY|Mod4Mask,              XK_h,      incrgaps,       {.i = +1 } }, */
-    /* { MODKEY|Mod4Mask,              XK_l,      incrgaps,       {.i = -1 } }, */
-    /* { MODKEY|Mod4Mask|ShiftMask,    XK_h,      incrogaps,      {.i = +1 } }, */
-    /* { MODKEY|Mod4Mask|ShiftMask,    XK_l,      incrogaps,      {.i = -1 } }, */
-    /* { MODKEY|Mod4Mask|ControlMask,  XK_h,      incrigaps,      {.i = +1 } }, */
-    /* { MODKEY|Mod4Mask|ControlMask,  XK_l,      incrigaps,      {.i = -1 } }, */
-    /* { MODKEY|Mod4Mask|ShiftMask,    XK_0,      defaultgaps,    {0} }, */
-    /* { MODKEY,                       XK_y,      incrihgaps,     {.i = +1 } }, */
-    /* { MODKEY,                       XK_o,      incrihgaps,     {.i = -1 } }, */
-    /* { MODKEY|ControlMask,           XK_y,      incrivgaps,     {.i = +1 } }, */
-    /* { MODKEY|ControlMask,           XK_o,      incrivgaps,     {.i = -1 } }, */
-    /* { MODKEY|Mod4Mask,              XK_y,      incrohgaps,     {.i = +1 } }, */
-    /* { MODKEY|Mod4Mask,              XK_o,      incrohgaps,     {.i = -1 } }, */
-    /* { MODKEY|ShiftMask,             XK_y,      incrovgaps,     {.i = +1 } }, */
-    /* { MODKEY|ShiftMask,             XK_o,      incrovgaps,     {.i = -1 } }, */
-
 };
 
 /* button definitions */

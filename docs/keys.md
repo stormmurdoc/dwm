@@ -1,5 +1,3 @@
-# Overview
-
 | Key | Function | Argument |
 | :-: | :-: | :- |
 |  j | ACTION##stack |  INC(+1) |
@@ -24,8 +22,8 @@
 | Super + d | spawns | rofi -show-icons -show drun |
 | Super + Shift + l | spawns | betterlockscreen -l '/home/murdoc/ownCloud/Bilder (Kopie)/Hintergrundbilder/trevor-cole-393228.jpg' |
 | Super + Shift + e | spawns | st -e neomutt |
-| Super + r | spawns | st -e lfrun |
-| Super + Shift + r | spawns | st -e htop |
+| Super + r | togglescratch |  2 |
+| Super + Shift + r | spawns | st -e btop |
 | Super + t | setlayout |  tile  |
 | Super + Shift + t | setlayout |  bstack  |
 | Super + z | setlayout |  spiral  |
@@ -112,7 +110,7 @@
 | WWW | spawns | $BROWSER |
 | DOS | spawns | st |
 | ScreenSaver | spawns | slock & xset dpms force off; mpc pause; pauseallmpv |
-| TaskPane | spawns | st -e htop |
+| TaskPane | spawns | st -e btop |
 | Mail | spawns | evolution |
 | MyComputer | spawns | st -e lfrun / |
 | Launch1 | spawns | xset dpms force off |

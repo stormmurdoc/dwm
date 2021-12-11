@@ -14,11 +14,11 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 
 /* Font config */
 static const char *fonts[]          = {
-   "Droid Sans:size=11:antialias=true:autohint=true",
-   "Droid Sans Mono Dotted for Powerline:size=11:antialias=true:autohint=true",
-   "monospace:size=11",
-   "JoyPixels:pixelsize=11:antialias=true:autohint=true"  };
-static char dmenufont[]             = "Droid Sans:size=11:antialias=true:autohint=true";
+   "Droid Sans:size=9:antialias=true:autohint=true",
+   "Droid Sans Mono Dotted for Powerline:size=9:antialias=true:autohint=true",
+   "monospace:size=9",
+   "JoyPixels:pixelsize=9:antialias=true:autohint=true"  };
+static char dmenufont[]             = "Droid Sans:size=9:antialias=true:autohint=true";
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
 static char normfgcolor[]           = "#ffffff";
@@ -36,8 +36,8 @@ typedef struct {
     const void *cmd;
 } Sp;
 const char *spcmd1[] = {"st", "-n", "spterm", "-g", "120x34", "-e", "tmuxinit.sh", NULL };
-const char *spcmd2[] = {"st", "-n", "spcalc", "-f", "monospace:size=16", "-g", "50x20", "-e", "bc", "-lq", NULL };
-const char *spcmd3[] = {"st", "-n", "splf", "-f", "monospace:size=16", "-g", "120x34", "-e", "lfrun", NULL };
+const char *spcmd2[] = {"st", "-n", "spcalc", "-f", "monospace:size=14", "-g", "50x20", "-e", "bc", "-lq", NULL };
+const char *spcmd3[] = {"st", "-n", "splf", "-f", "monospace:size=14", "-g", "120x34", "-e", "lfrun", NULL };
 static Sp scratchpads[] = {
     /* name          cmd  */
     {"spterm",      spcmd1},

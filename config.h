@@ -218,6 +218,7 @@ static Key keys[] = {
     { MODKEY,           XK_l,           setmfact,       {.f = +0.05} },
     { MODKEY,           XK_semicolon,   shiftview,      { .i = 1 } },
     { MODKEY|ShiftMask, XK_semicolon,   shifttag,       { .i = 1 } },
+	{ MODKEY|ShiftMask,	XK_apostrophe,	togglesmartgaps,	{0} },
     { MODKEY,           XK_c,           togglescratch,  {.ui = 1} },
     { MODKEY,           XK_Return,      spawn,          {.v = termcmd } },
     { MODKEY|ShiftMask, XK_Return,      togglescratch,  {.ui = 0} },

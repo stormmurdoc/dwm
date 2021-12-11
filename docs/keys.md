@@ -52,6 +52,7 @@
 | Super + l | setmfact |  +0.05 |
 | Super + semicolon | shiftview |  1 |
 | Super + Shift + semicolon | shifttag |  1 |
+| Super + Shift + apostrophe | togglesmartgaps |   |
 | Super + c | togglescratch |  1 |
 | Super + Return | spawns |  |
 | Super + Shift + Return | togglescratch |  0 |

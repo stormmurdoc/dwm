@@ -53,7 +53,7 @@
 | Super + semicolon | shiftview |  1 |
 | Super + Shift + semicolon | shifttag |  1 |
 | Super + c | togglescratch |  1 |
-| Super + Return | spawns |  st  |
+| Super + Return | spawns |  |
 | Super + Shift + Return | togglescratch |  0 |
 | Super + y | incrgaps |  +3 |
 | Super + Shift + y | incrgaps |  -3 |

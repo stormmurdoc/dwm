@@ -263,7 +263,6 @@ static Key keys[] = {
     { MODKEY|ShiftMask, XK_Print,       spawn,      SHCMD("dmenurecord.sh kill") },
     { MODKEY,           XK_Delete,      spawn,      SHCMD("dmenurecord.sh kill") },
     { MODKEY,           XK_Scroll_Lock, spawn,      SHCMD("killall screenkey || screenkey &") },
-
     { 0, XF86XK_AudioMute,              spawn,      SHCMD("pamixer -t; kill -44 $(pidof dwmblocks) && pa_notify.sh") },
     { 0, XF86XK_AudioRaiseVolume,       spawn,      SHCMD("pamixer --allow-boost -i 3; kill -44 $(pidof dwmblocks) && pa_notify.sh") },
     { 0, XF86XK_AudioLowerVolume,       spawn,      SHCMD("pamixer --allow-boost -d 3; kill -44 $(pidof dwmblocks) && pa_notify.sh") },

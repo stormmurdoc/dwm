@@ -44,6 +44,7 @@
 | Super + a | togglegaps |   |
 | Super + Shift + a | defaultgaps |   |
 | Super + s | togglesticky |   |
+| Super + Shift + s | spawns | .sh set EG.WZ.Sofa.Steckdose toggle |
 | Super + f | togglefullscr |   |
 | Super + Shift + f | setlayout |  float |
 | Super + g | shiftview |  -1 |

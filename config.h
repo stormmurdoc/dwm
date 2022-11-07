@@ -23,8 +23,8 @@ static char *fonts[]          = {
    "JoyPixels:pixelsize=9:antialias=true:autohint=true"  };
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
-static char normfgcolor[]           = "#bbbbbb";
-static char selfgcolor[]            = "#eeeeee";
+static char normfgcolor[]           = "#cccccc";
+static char selfgcolor[]            = "#ffffff";
 static char selbordercolor[]        = "#770000";
 static char selbgcolor[]            = "#222222";
 static char *colors[][3] = {

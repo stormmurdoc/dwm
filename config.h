@@ -46,7 +46,7 @@ static Sp scratchpads[] = {
 };
 
 /* tagging */
-static const char *tags[] = { "1:Web ", "2:Term ", "3:Files ", "4:VDI ", "5:IRC ", "6:Email ", "7:Discord ", "8", "9" }      ;
+static const char *tags[] = { "1:Web ", "2:Term ", "3:Files ", "4:VDI ", "5:IRC ", "6:Email ", "7:Music 🎹", "8", "9" }      ;
 
 /* rulez */
 static const Rule rules[] = {

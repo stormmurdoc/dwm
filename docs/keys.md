@@ -79,13 +79,13 @@
 | Super + Shift + Page_Down | shifttag |  +1 |
 | Super + Insert | spawns | notify-send \"📋 Clipboard contents:\" \"$(xclip -o -selection clipboard)\" |
 | Super + F1 | spawns | pamixer -t; kill -44 $(pidof dwmblocks) && pa_notify.sh |
-| Super + Shift + F1 | spawns | .sh set ls_Arbeitszimmer scene Arbeiten |
+| Super + Shift + F1 | spawns | .sh az arbeiten |
 | Super + F2 | spawns | dmenuunicode |
-| Super + Shift + F2 | spawns | .sh set ls_Arbeitszimmer scene Spielen |
+| Super + Shift + F2 | spawns | .sh az spielen |
 | Super + F3 | spawns | st -e displayselect.sh |
-| Super + Shift + F3 | spawns | .sh set ls_Arbeitszimmer scene ein |
+| Super + Shift + F3 | spawns | .sh az hell |
 | Super + F4 | spawns | st -e pulsemixer; kill -44 $(pidof dwmblocks) |
-| Super + Shift + F4 | spawns | .sh set ls_Arbeitszimmer scene powersave |
+| Super + Shift + F4 | spawns | .sh az powersave |
 | Super + F6 | spawns | torwrap |
 | Super + F7 | spawns | td-toggle |
 | Super + F8 | spawns | mailsync |

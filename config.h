@@ -220,7 +220,7 @@ static Key keys[] = {
     /* V is automatically bound above in STACKKEYS */
     { MODKEY,           XK_b,           togglebar,      {0} },
     { MODKEY|ShiftMask, XK_b,           spawn,      SHCMD("airpods.sh t") },
-    { MODKEY,           XK_n,           spawn,      SHCMD("st -e nvim -u /home/murdoc/.config/nvim/init.vim -c VimwikiIndex") },
+    { MODKEY,           XK_n,           spawn,      SHCMD("st -e nvim -u /home/murdoc/.config/nvim/init.lua -c VimwikiIndex") },
     { MODKEY|ShiftMask, XK_n,           spawn,      SHCMD("st -e newsboat; pkill -RTMIN+6 dwmblocks") },
     { MODKEY,           XK_m,           spawn,      SHCMD("alacritty -e ncmpcpp") },
     { MODKEY|ShiftMask, XK_m,           spawn,      SHCMD("pamixer -t; kill -44 $(pidof dwmblocks) && pa_notify.sh") },

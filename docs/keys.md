@@ -61,7 +61,7 @@
 | Super + Shift + y | incrgaps |  -3 |
 | Super + b | togglebar |   |
 | Super + Shift + b | spawns | airpods.sh t |
-| Super + n | spawns | st -e nvim -u /home/murdoc/.config/nvim/init.vim -c VimwikiIndex |
+| Super + n | spawns | st -e nvim -u /home/murdoc/.config/nvim/init.lua -c VimwikiIndex |
 | Super + Shift + n | spawns | st -e newsboat; pkill -RTMIN+6 dwmblocks |
 | Super + m | spawns | alacritty -e ncmpcpp |
 | Super + Shift + m | spawns | pamixer -t; kill -44 $(pidof dwmblocks) && pa_notify.sh |

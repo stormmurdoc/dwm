@@ -63,7 +63,7 @@
 | Super + Shift + b | spawns | airpods.sh t |
 | Super + n | spawns | st -e nvim -u /home/murdoc/.config/nvim/init.lua -c VimwikiIndex |
 | Super + Shift + n | spawns | st -e newsboat; pkill -RTMIN+6 dwmblocks |
-| Super + m | spawns | alacritty -e ncmpcpp |
+| Super + m | spawns | st -e ncmpcpp |
 | Super + Shift + m | spawns | pamixer -t; kill -44 $(pidof dwmblocks) && pa_notify.sh |
 | Super + comma | spawns | mpc prev |
 | Super + Shift + comma | spawns | mpc seek 0% |
@@ -85,7 +85,8 @@
 | Super + F3 | spawns | st -e displayselect.sh |
 | Super + Shift + F3 | spawns | .sh az hell |
 | Super + F4 | spawns | st -e pulsemixer; kill -44 $(pidof dwmblocks) |
-| Super + Shift + F4 | spawns | .sh az powersave |
+| Super + Shift + F4 | spawns | .sh az minimal |
+| Super + Shift + F5 | spawns | .sh az powersave |
 | Super + F6 | spawns | torwrap |
 | Super + F7 | spawns | td-toggle |
 | Super + F8 | spawns | mailsync |

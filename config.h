@@ -21,12 +21,12 @@ static char *fonts[]          = {
    "Droid Sans Mono Dotted for Powerline:size=9:antialias=true:autohint=true",
    "monospace:size=9",
    "JoyPixels:pixelsize=9:antialias=true:autohint=true"  };
-static char normbgcolor[]           = "#222222";
-static char normbordercolor[]       = "#444444";
-static char normfgcolor[]           = "#cccccc";
+static char normbgcolor[]           = "#020222";
+static char normbordercolor[]       = "#ff0000";
+static char normfgcolor[]           = "#f99157";
 static char selfgcolor[]            = "#ffffff";
 static char selbordercolor[]        = "#770000";
-static char selbgcolor[]            = "#222222";
+static char selbgcolor[]            = "#020222";
 static char *colors[][3] = {
        /*               fg           bg           border   */
        [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },

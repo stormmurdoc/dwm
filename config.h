@@ -22,7 +22,7 @@ static char *fonts[]          = {
    "monospace:size=9",
    "JoyPixels:pixelsize=9:antialias=true:autohint=true"  };
 static char normbgcolor[]           = "#020222";
-static char normbordercolor[]       = "#ff0000";
+static char normbordercolor[]       = "#020222";
 static char normfgcolor[]           = "#BFDAFF";
 static char selfgcolor[]            = "#fec452";
 static char selbordercolor[]        = "#770000";

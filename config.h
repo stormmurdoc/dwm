@@ -66,9 +66,7 @@ static const Rule rules[] = {
     /* class                        instance        title             tags mask
        isfloating   isterminal  noswallow  monitor */
     {"St", NULL, NULL, 0, 0, 1, 0, -1},
-    {"Gimp", NULL, NULL, 1 << 8, 0, 0, 0, -1},
     {"trayer", NULL, NULL, 1 << 8, 1, 0, 0, -1},
-    {"das-keyboard-q", NULL, NULL, 1 << 8, 0, 0, 0, -1},
     {"Evolution", NULL, NULL, 1 << 5, 0, 0, 0, -1},
     {"Evolution-alarm-notify", NULL, NULL, 1 << 5, 1, 0, 0, -1},
     {"Cider", NULL, NULL, 1 << 6, 0, 0, 0, -1},

@@ -221,7 +221,7 @@ static Key keys[] = {
     {MODKEY | ShiftMask, XK_a, defaultgaps, {0}},
     {MODKEY, XK_s, togglesticky, {0}},
     {MODKEY | ShiftMask, XK_s, spawn,
-     SHCMD("fcmd.sh set EG.WZ.Sofa.Steckdose toggle")},
+     SHCMD("ha-cli device toggle switch.eg_wz_sofa_steckdose_sofa_steckdose_2")},
     {MODKEY, XK_f, togglefullscr, {0}},
     {MODKEY | ShiftMask, XK_f, setlayout, {.v = &layouts[8]}},
     {MODKEY, XK_g, shiftview, {.i = -1}},

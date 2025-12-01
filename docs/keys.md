@@ -64,13 +64,8 @@
 | Super  +  Shift + Page_Up | shifttag |  -1 |
 | Super + Page_Down | shiftview |  +1 |
 | Super  +  Shift + Page_Down | shifttag |  +1 |
-| Super  +  Shift + F1 | spawns | ha-cli scene scene.arbeiten |
 | Super + F2 | spawns | dmenuunicode |
-| Super  +  Shift + F2 | spawns | ha-cli scene scene.arbeitszimmer_spielen |
 | Super + F3 | spawns | st -e displayselect.sh |
-| Super  +  Shift + F3 | spawns | ha-cli scene scene.arbeitszimmer_hell |
-| Super  +  Shift + F4 | spawns | ha-cli scene scene.arbeitszimmer_minimal |
-| Super  +  Shift + F5 | spawns | .sh az powersave |
 | Super + F6 | spawns | torwrap |
 | Super + F7 | spawns | td-toggle |
 | Super + F8 | spawns | mailsync |
